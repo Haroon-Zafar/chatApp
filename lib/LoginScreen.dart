@@ -18,6 +18,7 @@ class _LoginScreenState extends State<LoginScreen> {
             height: size.height / 20,
           ),
           Container(
+            alignment: Alignment.center,
             width: size.width,
             child: IconButton(
               onPressed: () {},
