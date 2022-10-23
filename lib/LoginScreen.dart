@@ -14,9 +14,18 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: Column(
         children: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.arrow_back_ios),
+          SizedBox(
+            height: size.height / 20,
+          ),
+          Container(
+            width: size.width,
+            child: IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.arrow_back_ios),
+            ),
+          ),
+          Container(
+            width: size.width / 1.1,
           ),
         ],
       ),
