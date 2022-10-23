@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -18,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
             height: size.height / 20,
           ),
           Container(
-            alignment: Alignment.center,
+            alignment: Alignment.centerLeft,
             width: size.width,
             child: IconButton(
               onPressed: () {},
@@ -27,6 +29,10 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           Container(
             width: size.width / 1.1,
+            child: Text(
+              "Welcome",
+              style: TextStyle(),
+            ),
           ),
         ],
       ),
