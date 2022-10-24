@@ -89,3 +89,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+#dependency_overrides:
+#    firebase_auth: ^3.3.8
+#    firebase_core: ^1.12.0
