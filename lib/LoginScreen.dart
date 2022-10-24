@@ -49,18 +49,23 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
           ),
+          SizedBox(
+            height: size.height / 10,
+          ),
+          field(size, "email", Icons.account_box),
         ],
       ),
     );
   }
 }
 
-Widget field(Size size, String hintText) {
+Widget field(Size size, String hintText, IconData icon) {
   return Container(
     height: size.height / 15,
-    width: size.width / 1.3,
+    width: size.width / 1.1,
     child: TextField(
       decoration: InputDecoration(
+        prefixIcon: Icon(icon),
         hintText: hintText,
         hintStyle: TextStyle(
           color: Colors.grey,
