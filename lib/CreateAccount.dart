@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 class CreateAccount extends StatelessWidget {
   const CreateAccount({Key? key}) : super(key: key);
 
+  final TextEditingController _name = TextEditingController();
+  final TextEditingController _email = TextEditingController();
+  final TextEditingController _password = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -61,6 +65,7 @@ class CreateAccount extends StatelessWidget {
                   size,
                   "Name",
                   Icons.lock,
+                  _name,
                 ),
               ),
             ),
@@ -72,6 +77,7 @@ class CreateAccount extends StatelessWidget {
                 size,
                 "email",
                 Icons.account_box,
+                _email,
               ),
             ),
             Padding(
@@ -83,6 +89,7 @@ class CreateAccount extends StatelessWidget {
                   size,
                   "Password",
                   Icons.lock,
+                  _password,
                 ),
               ),
             ),
@@ -151,11 +158,13 @@ Widget customButton(Size size) {
   );
 }
 
-Widget field(Size size, String hintText, IconData icon) {
+Widget field(
+    Size size, String hintText, IconData icon, TextEditingController cont) {
   return Container(
     height: size.height / 15,
     width: size.width / 1.1,
     child: TextField(
+      controller: cont,
       decoration: InputDecoration(
         prefixIcon: Icon(icon),
         hintText: hintText,

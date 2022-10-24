@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
+  final TextEditingController _email = TextEditingController();
+  final TextEditingController _password = TextEditingController();
+
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -60,6 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
               size,
               "email",
               Icons.account_box,
+              _email,
             ),
           ),
           Padding(
@@ -71,6 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 size,
                 "Password",
                 Icons.lock,
+                _password,
               ),
             ),
           ),
@@ -126,11 +131,13 @@ Widget customButton(Size size) {
   );
 }
 
-Widget field(Size size, String hintText, IconData icon) {
+Widget field(
+    Size size, String hintText, IconData icon, extEditingController cont) {
   return Container(
     height: size.height / 15,
     width: size.width / 1.1,
     child: TextField(
+      controller: cont,
       decoration: InputDecoration(
         prefixIcon: Icon(icon),
         hintText: hintText,
