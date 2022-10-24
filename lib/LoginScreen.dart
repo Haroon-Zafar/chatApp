@@ -1,3 +1,4 @@
+import 'package:chat_app/CreateAccount.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -83,12 +84,19 @@ class _LoginScreenState extends State<LoginScreen> {
           SizedBox(
             height: size.height / 40,
           ),
-          Text(
-            "Create Account",
-            style: TextStyle(
-              color: Colors.blue,
-              fontSize: 16,
-              fontWeight: FontWeight.w500,
+          GestureDetector(
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => CreateAccount(),
+              ),
+            ),
+            child: Text(
+              "Create Account",
+              style: TextStyle(
+                color: Colors.blue,
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
         ],
