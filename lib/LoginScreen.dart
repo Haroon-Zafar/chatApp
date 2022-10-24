@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Container(
             width: size.width / 1.3,
             child: Text(
-              "Sign In to Continue",
+              "Sign In to Continue!",
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 25,

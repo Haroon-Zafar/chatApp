@@ -25,6 +25,7 @@ class CreateAccount extends StatelessWidget {
             SizedBox(
               height: size.height / 50,
             ),
+            // `Welcome` Container
             Container(
               width: size.width / 1.5,
               child: Text(
@@ -35,13 +36,14 @@ class CreateAccount extends StatelessWidget {
                 ),
               ),
             ),
+            // Create Account to Continue Container
             Container(
               width: size.width / 1.3,
               child: Text(
-                "Sign In to Continue",
+                "Create Account to Continue!",
                 style: TextStyle(
                   color: Colors.grey,
-                  fontSize: 25,
+                  fontSize: 20,
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -49,6 +51,20 @@ class CreateAccount extends StatelessWidget {
             SizedBox(
               height: size.height / 10,
             ),
+            // Name's TextField
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 18.0),
+              child: Container(
+                width: size.width,
+                alignment: Alignment.center,
+                child: field(
+                  size,
+                  "Name",
+                  Icons.lock,
+                ),
+              ),
+            ),
+            // email's TextField
             Container(
               width: size.width,
               alignment: Alignment.center,
@@ -70,7 +86,25 @@ class CreateAccount extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(
+              height: size.height / 20,
+            ),
             customButton(size),
+            // login hyperlink
+            SizedBox(
+              height: size.height / 40,
+            ),
+            GestureDetector(
+              onTap: () => Navigator.pop(context),
+              child: Text(
+                "Login",
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
             // SizedBox(
             //   height: size.height / 10,
             // ),
@@ -95,20 +129,23 @@ class CreateAccount extends StatelessWidget {
 
 // Making a Custom Button
 Widget customButton(Size size) {
-  return Container(
-    alignment: Alignment.center,
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(5),
-      color: Colors.blue,
-    ),
-    height: size.height / 14,
-    width: size.width / 1.2,
-    child: Text(
-      "Login",
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
+  return GestureDetector(
+    onTap: () {},
+    child: Container(
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        color: Colors.pink,
+      ),
+      height: size.height / 14,
+      width: size.width / 1.2,
+      child: Text(
+        "Create Account",
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     ),
   );
