@@ -54,3 +54,21 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+
+Widget field(Size size, String hintText) {
+  return Container(
+    height: size.height / 15,
+    width: size.width / 1.3,
+    child: TextField(
+      decoration: InputDecoration(
+        hintText: hintText,
+        hintStyle: TextStyle(
+          color: Colors.grey,
+        ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+      ),
+    ),
+  );
+}
