@@ -73,7 +73,24 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
           ),
+          SizedBox(
+            height: size.height / 10,
+          ),
+          SizedBox(
+            height: size.height / 20,
+          ),
           customButton(size),
+          SizedBox(
+            height: size.height / 40,
+          ),
+          Text(
+            "Create Account",
+            style: TextStyle(
+              color: Colors.blue,
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
         ],
       ),
     );

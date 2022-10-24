@@ -71,17 +71,21 @@ class CreateAccount extends StatelessWidget {
               ),
             ),
             customButton(size),
-            SizedBox(
-              height: size.height / 8,
-            ),
-            Text(
-              "Create Account",
-              style: TextStyle(
-                color: Colors.blue,
-                fontSize: 18,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
+            // SizedBox(
+            //   height: size.height / 10,
+            // ),
+            // customButton(size),
+            // SizedBox(
+            //   height: size.height / 40,
+            // ),
+            // Text(
+            //   "Create Account",
+            //   style: TextStyle(
+            //     color: Colors.blue,
+            //     fontSize: 16,
+            //     fontWeight: FontWeight.w500,
+            //   ),
+            // ),
           ],
         ),
       ),
