@@ -61,19 +61,37 @@ class _LoginScreenState extends State<LoginScreen> {
               Icons.account_box,
             ),
           ),
-          Container(
-            width: size.width,
-            alignment: Alignment.center,
-            child: field(
-              size,
-              "Password",
-              Icons.lock,
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 18.0),
+            child: Container(
+              width: size.width,
+              alignment: Alignment.center,
+              child: field(
+                size,
+                "Password",
+                Icons.lock,
+              ),
             ),
           ),
         ],
       ),
     );
   }
+}
+
+// Making a Custom Button
+Widget customButton(Size size) {
+  return Container(
+    height: size.height / 14,
+    width: size.width / 1.2,
+    child: Text(
+      "Login",
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 22,
+      ),
+    ),
+  );
 }
 
 Widget field(Size size, String hintText, IconData icon) {
