@@ -73,6 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
           ),
+          customButton(size),
         ],
       ),
     );
@@ -82,13 +83,19 @@ class _LoginScreenState extends State<LoginScreen> {
 // Making a Custom Button
 Widget customButton(Size size) {
   return Container(
+    alignment: Alignment.center,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(5),
+      color: Colors.blue,
+    ),
     height: size.height / 14,
     width: size.width / 1.2,
     child: Text(
       "Login",
       style: TextStyle(
         color: Colors.white,
-        fontSize: 22,
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
       ),
     ),
   );
