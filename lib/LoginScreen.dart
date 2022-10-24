@@ -52,7 +52,24 @@ class _LoginScreenState extends State<LoginScreen> {
           SizedBox(
             height: size.height / 10,
           ),
-          field(size, "email", Icons.account_box),
+          Container(
+            width: size.width,
+            alignment: Alignment.center,
+            child: field(
+              size,
+              "email",
+              Icons.account_box,
+            ),
+          ),
+          Container(
+            width: size.width,
+            alignment: Alignment.center,
+            child: field(
+              size,
+              "Password",
+              Icons.lock,
+            ),
+          ),
         ],
       ),
     );
