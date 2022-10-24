@@ -86,7 +86,7 @@ Widget customButton(Size size) {
     alignment: Alignment.center,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(5),
-      color: Colors.blue,
+      color: Colors.purple,
     ),
     height: size.height / 14,
     width: size.width / 1.2,
