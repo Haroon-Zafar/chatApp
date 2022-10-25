@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
-  final TextEditingController _email = TextEditingController();
-  final TextEditingController _password = TextEditingController();
+  // final TextEditingController _email = TextEditingController();
+  // final TextEditingController _password = TextEditingController();
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -15,96 +15,101 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    TextEditingController _email = TextEditingController();
+    TextEditingController _password = TextEditingController();
+
     return Scaffold(
-      body: Column(
-        children: [
-          SizedBox(
-            height: size.height / 20,
-          ),
-          Container(
-            alignment: Alignment.centerLeft,
-            width: size.width / 1.2,
-            child: IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.arrow_back_ios),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: size.height / 20,
             ),
-          ),
-          SizedBox(
-            height: size.height / 50,
-          ),
-          Container(
-            width: size.width / 1.5,
-            child: Text(
-              "Welcome",
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
+            Container(
+              alignment: Alignment.centerLeft,
+              width: size.width / 1.2,
+              child: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_back_ios),
               ),
             ),
-          ),
-          Container(
-            width: size.width / 1.3,
-            child: Text(
-              "Sign In to Continue!",
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: 25,
-                fontWeight: FontWeight.w500,
+            SizedBox(
+              height: size.height / 50,
+            ),
+            Container(
+              width: size.width / 1.5,
+              child: Text(
+                "Welcome",
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: size.height / 10,
-          ),
-          Container(
-            width: size.width,
-            alignment: Alignment.center,
-            child: field(
-              size,
-              "email",
-              Icons.account_box,
-              _email,
+            Container(
+              width: size.width / 1.3,
+              child: Text(
+                "Sign In to Continue!",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 25,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 18.0),
-            child: Container(
+            SizedBox(
+              height: size.height / 10,
+            ),
+            Container(
               width: size.width,
               alignment: Alignment.center,
               child: field(
                 size,
-                "Password",
-                Icons.lock,
-                _password,
+                "email",
+                Icons.account_box,
+                _email,
               ),
             ),
-          ),
-          SizedBox(
-            height: size.height / 10,
-          ),
-          SizedBox(
-            height: size.height / 20,
-          ),
-          customButton(size),
-          SizedBox(
-            height: size.height / 40,
-          ),
-          GestureDetector(
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => CreateAccount(),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 18.0),
+              child: Container(
+                width: size.width,
+                alignment: Alignment.center,
+                child: field(
+                  size,
+                  "Password",
+                  Icons.lock,
+                  _password,
+                ),
               ),
             ),
-            child: Text(
-              "Create Account",
-              style: TextStyle(
-                color: Colors.blue,
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
+            SizedBox(
+              height: size.height / 10,
+            ),
+            SizedBox(
+              height: size.height / 40,
+            ),
+            customButton(size),
+            SizedBox(
+              height: size.height / 40,
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => CreateAccount(),
+                ),
+              ),
+              child: Text(
+                "Create Account",
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -134,8 +139,9 @@ Widget customButton(Size size) {
   );
 }
 
+//extEditingController
 Widget field(
-    Size size, String hintText, IconData icon, extEditingController cont) {
+    Size size, String hintText, IconData icon, TextEditingController cont) {
   return Container(
     height: size.height / 15,
     width: size.width / 1.1,

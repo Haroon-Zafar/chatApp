@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
 class CreateAccount extends StatelessWidget {
   const CreateAccount({Key? key}) : super(key: key);
 
-  final TextEditingController _name = TextEditingController();
-  final TextEditingController _email = TextEditingController();
-  final TextEditingController _password = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final TextEditingController _name = TextEditingController();
+    final TextEditingController _email = TextEditingController();
+    final TextEditingController _password = TextEditingController();
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -101,14 +100,19 @@ class CreateAccount extends StatelessWidget {
             SizedBox(
               height: size.height / 40,
             ),
-            GestureDetector(
-              onTap: () => Navigator.pop(context),
-              child: Text(
-                "Login",
-                style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 1.0,
+              ),
+              child: GestureDetector(
+                onTap: () => Navigator.pop(context),
+                child: Text(
+                  "Login",
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
             ),
