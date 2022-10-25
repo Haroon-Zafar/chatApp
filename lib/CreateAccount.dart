@@ -9,6 +9,8 @@ class CreateAccount extends StatelessWidget {
     final TextEditingController _name = TextEditingController();
     final TextEditingController _email = TextEditingController();
     final TextEditingController _password = TextEditingController();
+    // Creating a boolean function initialized with false.
+    bool isLoading = false;
 
     return Scaffold(
       body: SingleChildScrollView(
