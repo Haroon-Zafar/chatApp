@@ -43,3 +43,15 @@ Future logIn(String email, String password) async {
     return null;
   }
 }
+
+// creating a logOut() function
+
+Future logOut() async {
+  FirebaseAuth _auth = FirebaseAuth.instance;
+
+  try {
+    await _auth.signOut();
+  } catch (e) {
+    print("error");
+  }
+}
